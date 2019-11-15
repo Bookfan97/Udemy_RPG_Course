@@ -10322,6 +10322,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6620388076026421931, guid: b1b3f02303df261428e64ee2c3a13fb5,
+        type: 3}
+      propertyPath: fadeSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6620388075069494303, guid: b1b3f02303df261428e64ee2c3a13fb5,
         type: 3}
       propertyPath: m_AnchoredPosition.x

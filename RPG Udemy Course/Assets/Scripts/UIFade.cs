@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class UIFade : MonoBehaviour
 {
     public Image fadeScreen;
-    public float fadeSpeed=1;
-    public bool shouldFadeToBlack;
+    public float fadeSpeed;
+    private bool shouldFadeToBlack;
     private bool shouldFadeFromBlack;
     public static UIFade instance;
 
