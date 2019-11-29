@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class DialogManager : MonoBehaviour
 {
     public Text dialogText;
-    public Text nameTest;
+    public Text nameText;
     public GameObject dialogBox;
     public GameObject nameBox;
     public string[] dialogLines;
@@ -34,9 +34,11 @@ public class DialogManager : MonoBehaviour
                     if (currentLine >= dialogLines.Length)
                     {
                         dialogBox.SetActive(false);
+                        PlayerController.instance.canMove = true;
                     }
                     else
                     {
+                        CheckIfName();
                         dialogText.text = dialogLines[currentLine];
                     }
                 }
@@ -50,12 +52,23 @@ public class DialogManager : MonoBehaviour
         }
     }
 
-    public void ShowDialog(string[] newlines)
+    public void ShowDialog(string[] newlines, bool isPerson)
     {
         dialogLines = newlines;
         currentLine = 0;
-        dialogText.text = dialogLines[0];
+        CheckIfName();
+        dialogText.text = dialogLines[currentLine];
         dialogBox.SetActive(true);
         justStarted = true;
+        nameBox.SetActive(isPerson);
+        PlayerController.instance.canMove = false;
+    }
+    public void CheckIfName()
+    {
+        if(dialogLines[currentLine].StartsWith("n-"))
+        {
+            nameText.text = dialogLines[currentLine].Replace("n-", "");
+            currentLine++;
+        }
     }
 }
