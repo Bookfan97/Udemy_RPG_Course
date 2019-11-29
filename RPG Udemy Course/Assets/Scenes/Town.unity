@@ -3882,6 +3882,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theMenu: {fileID: 747953781}
+  nameText:
+  - {fileID: 1641989276}
+  - {fileID: 463230290}
+  - {fileID: 628346367}
+  hpText:
+  - {fileID: 1678985032}
+  - {fileID: 1935661202}
+  - {fileID: 1978522755}
+  mpText:
+  - {fileID: 557397584}
+  - {fileID: 1179922901}
+  - {fileID: 2110412689}
+  lvlText:
+  - {fileID: 1436789343}
+  - {fileID: 366764822}
+  - {fileID: 1045901222}
+  expText:
+  - {fileID: 759469843}
+  - {fileID: 387199048}
+  - {fileID: 424867384}
+  expSlider:
+  - {fileID: 1268149932}
+  - {fileID: 1068075299}
+  - {fileID: 1263474196}
+  charImage:
+  - {fileID: 1003450835}
+  - {fileID: 439776139}
+  - {fileID: 2100611928}
+  charStatHolder:
+  - {fileID: 1295735673}
+  - {fileID: 375401416}
+  - {fileID: 407842456}
 --- !u!1 &557397582
 GameObject:
   m_ObjectHideFlags: 0
