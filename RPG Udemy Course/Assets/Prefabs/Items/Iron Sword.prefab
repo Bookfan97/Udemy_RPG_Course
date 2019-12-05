@@ -94,8 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isItem: 0
-  isWeapon: 0
-  isArmor: 1
+  isWeapon: 1
+  isArmor: 0
   itemName: Iron Sword
   description: It's sharp and pointy, like cheese
   value: 25

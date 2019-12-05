@@ -94,8 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isItem: 0
-  isWeapon: 0
-  isArmor: 1
+  isWeapon: 1
+  isArmor: 0
   itemName: Wooden Sword
   description: Easily broken, just like me
   value: 25
