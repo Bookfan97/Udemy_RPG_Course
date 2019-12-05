@@ -46,3 +46,4 @@ MonoBehaviour:
   UIScreen: {fileID: 6620388076026421932, guid: b1b3f02303df261428e64ee2c3a13fb5,
     type: 3}
   player: {fileID: 1914577921288511360, guid: 4c518a71906cf6944a49596c053d5983, type: 3}
+  gameMan: {fileID: 419365123027942051, guid: d6bdb8cd18a1f2a4892bf5951cf7f3f2, type: 3}
