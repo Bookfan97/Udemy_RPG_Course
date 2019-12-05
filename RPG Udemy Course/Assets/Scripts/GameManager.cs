@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public int[] numberOfItems;
     public Item[] referenceItems;
     public int currentGold;
+    public bool shopActive;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +25,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(gameMenuOpen || dialogActive || fadingBetweenAreas)
+        if(gameMenuOpen || dialogActive || fadingBetweenAreas|| shopActive)
         {
             PlayerController.instance.canMove = false;
         }
