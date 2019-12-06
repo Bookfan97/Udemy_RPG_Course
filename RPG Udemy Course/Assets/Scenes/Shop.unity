@@ -6229,7 +6229,129 @@ MonoBehaviour:
   buyMenu: {fileID: 1014633689}
   sellMenu: {fileID: 1810415857}
   goldText: {fileID: 1520603895}
-  itemsForSale: []
+  itemsForSale:
+  - Health Potion
+  - Mana Potion
+  - 
+  - 
+  - Iron Armor
+  - Leather Armor
+  - 
+  - 
+  - Wooden Sword
+  - Iron Sword
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  buyItemButtons:
+  - {fileID: 2043124033}
+  - {fileID: 1150336341}
+  - {fileID: 1003020974}
+  - {fileID: 234132701}
+  - {fileID: 949280204}
+  - {fileID: 539086234}
+  - {fileID: 943908548}
+  - {fileID: 1664726958}
+  - {fileID: 2073644535}
+  - {fileID: 624020787}
+  - {fileID: 1350416797}
+  - {fileID: 1856305859}
+  - {fileID: 828964163}
+  - {fileID: 680675167}
+  - {fileID: 1014606656}
+  - {fileID: 2032563267}
+  - {fileID: 1088474058}
+  - {fileID: 287161752}
+  - {fileID: 435180595}
+  - {fileID: 1781657591}
+  - {fileID: 1469459519}
+  - {fileID: 1857675542}
+  - {fileID: 173244201}
+  - {fileID: 979413889}
+  - {fileID: 309226901}
+  - {fileID: 83773415}
+  - {fileID: 1773349132}
+  - {fileID: 877614810}
+  - {fileID: 1077977677}
+  - {fileID: 2029037698}
+  - {fileID: 113548753}
+  - {fileID: 1936076106}
+  - {fileID: 103128746}
+  - {fileID: 101783965}
+  - {fileID: 1199038903}
+  - {fileID: 484233523}
+  - {fileID: 1238090362}
+  - {fileID: 121270631}
+  - {fileID: 21450854}
+  - {fileID: 1888280077}
+  sellItemButtons:
+  - {fileID: 1433715902}
+  - {fileID: 814124481}
+  - {fileID: 377799327}
+  - {fileID: 405194879}
+  - {fileID: 1259420629}
+  - {fileID: 1897327958}
+  - {fileID: 1045342287}
+  - {fileID: 1763896280}
+  - {fileID: 1182319941}
+  - {fileID: 86306161}
+  - {fileID: 1734461074}
+  - {fileID: 804828495}
+  - {fileID: 1294705855}
+  - {fileID: 984418827}
+  - {fileID: 276335064}
+  - {fileID: 190438282}
+  - {fileID: 1680591903}
+  - {fileID: 52796424}
+  - {fileID: 1650772622}
+  - {fileID: 1316245560}
+  - {fileID: 1819788973}
+  - {fileID: 1416166713}
+  - {fileID: 856380767}
+  - {fileID: 973147385}
+  - {fileID: 1438857097}
+  - {fileID: 1477200933}
+  - {fileID: 1807270843}
+  - {fileID: 1882190448}
+  - {fileID: 1941757085}
+  - {fileID: 2142413103}
+  - {fileID: 534733842}
+  - {fileID: 292120315}
+  - {fileID: 1714285912}
+  - {fileID: 1437527339}
+  - {fileID: 708747799}
+  - {fileID: 2090731859}
+  - {fileID: 995440560}
+  - {fileID: 719735931}
+  - {fileID: 2098850679}
+  - {fileID: 1331947515}
 --- !u!224 &336730973 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6620388076026421928, guid: b1b3f02303df261428e64ee2c3a13fb5,
@@ -9797,7 +9919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1080327854, guid: b1b3f02303df261428e64ee2c3a13fb5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -43.30005
+      value: -43.299988
       objectReference: {fileID: 0}
     - target: {fileID: 1174922792, guid: b1b3f02303df261428e64ee2c3a13fb5, type: 3}
       propertyPath: m_AnchorMin.y
@@ -15620,7 +15742,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -102.8999, y: -43.30005}
+  m_AnchoredPosition: {x: -102.8999, y: -43.299988}
   m_SizeDelta: {x: -262.8, y: -133.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &904223033
@@ -24159,7 +24281,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -102.8999, y: -43.30005}
+  m_AnchoredPosition: {x: -102.8999, y: -43.299988}
   m_SizeDelta: {x: -262.8, y: -133.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1560830578
@@ -29902,6 +30024,7 @@ GameObject:
   - component: {fileID: 1980466406}
   - component: {fileID: 1980466409}
   - component: {fileID: 1980466408}
+  - component: {fileID: 1980466410}
   m_Layer: 0
   m_Name: Shopkeeper
   m_TagString: Untagged
@@ -29985,7 +30108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a6398b0f8d814c45a4d769bb3b4e345, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsForSale:
+  ItemsForSale:
   - Health Potion
   - Mana Potion
   - 
@@ -29994,8 +30117,38 @@ MonoBehaviour:
   - Leather Armor
   - 
   - 
-  - Wood Sword
+  - Wooden Sword
   - Iron Sword
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
 --- !u!61 &1980466409
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30021,6 +30174,32 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1.8266451, y: 2.5911696}
+  m_EdgeRadius: 0
+--- !u!61 &1980466410
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980466405}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.75, y: 0.9375}
+    newSize: {x: 0.75, y: 0.9375}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.75, y: 0.9375}
   m_EdgeRadius: 0
 --- !u!1 &1981477744
 GameObject:

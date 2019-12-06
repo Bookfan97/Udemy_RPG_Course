@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShopKeeper : MonoBehaviour
 {
     private bool canOpen;
-    public string[] itemsForSale;
+    public string[] ItemsForSale = new string[40];
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +17,7 @@ public class ShopKeeper : MonoBehaviour
     {
         if (canOpen && Input.GetButtonDown("Fire1") && PlayerController.instance.canMove && !Shop.instance.shopMenu.activeInHierarchy)
         {
-            Shop.instance.itemsForSale= itemsForSale;
+            Shop.instance.itemsForSale= ItemsForSale;
             Shop.instance.OpenShop();
         }
     }
