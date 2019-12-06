@@ -10,7 +10,7 @@ public class Shop : MonoBehaviour
     public GameObject buyMenu;
     public GameObject sellMenu;
     public Text goldText;
-    
+    public string[] itemsForSale;
 
     // Start is called before the first frame update
     void Start()
