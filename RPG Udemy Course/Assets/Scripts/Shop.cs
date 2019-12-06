@@ -13,7 +13,9 @@ public class Shop : MonoBehaviour
     public string[] itemsForSale;
     public ItemButton[] buyItemButtons;
     public ItemButton[] sellItemButtons;
-
+    public Item selectedItem;
+    public Text buyItemName, buyItemDescription, buyItemValue;
+    public Text sellItemName, sellItemDescription, sellItemValue;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +45,7 @@ public class Shop : MonoBehaviour
 
     public void OpenBuyMenu()
     {
+        buyItemButtons[0].Press();
         buyMenu.SetActive(true);
         sellMenu.SetActive(false);
 
@@ -65,6 +68,7 @@ public class Shop : MonoBehaviour
 
     public void OpenSellMenu()
     {
+        sellItemButtons[0].Press();
         buyMenu.SetActive(false);
         sellMenu.SetActive(true);
         GameManager.instance.SortItems();
@@ -83,5 +87,22 @@ public class Shop : MonoBehaviour
                 sellItemButtons[i].amountText.text = "";
             }
         }
+    }
+
+    public void SelectBuyItems(Item buyItem)
+    {
+        selectedItem = buyItem;
+        buyItemName.text = selectedItem.itemName;
+        buyItemDescription.text = selectedItem.description;
+        buyItemValue.text = "Value: " + selectedItem.value;
+
+    }
+
+    public void SelectSellItems(Item sellItem)
+    {
+        selectedItem = sellItem;
+        sellItemName.text = selectedItem.itemName;
+        sellItemDescription.text = selectedItem.description;
+        sellItemValue.text = "Value: " + Mathf.FloorToInt(selectedItem.value * .5f).ToString() +"g";
     }
 }

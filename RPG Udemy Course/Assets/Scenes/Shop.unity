@@ -6352,6 +6352,13 @@ MonoBehaviour:
   - {fileID: 719735931}
   - {fileID: 2098850679}
   - {fileID: 1331947515}
+  selectedItem: {fileID: 0}
+  buyItemName: {fileID: 1483139965}
+  buyItemDescription: {fileID: 904223033}
+  buyItemValue: {fileID: 423369}
+  sellItemName: {fileID: 391846617}
+  sellItemDescription: {fileID: 1560830578}
+  sellItemValue: {fileID: 2096556445}
 --- !u!224 &336730973 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6620388076026421928, guid: b1b3f02303df261428e64ee2c3a13fb5,
