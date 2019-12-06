@@ -17655,21 +17655,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AreaExit
       objectReference: {fileID: 0}
-    - target: {fileID: 3063763193183766520, guid: 390b6ba69fd80ad48bfc87410c3926c8,
-        type: 3}
-      propertyPath: areaToLoad
-      value: Countryside
-      objectReference: {fileID: 0}
-    - target: {fileID: 3063763193183766520, guid: 390b6ba69fd80ad48bfc87410c3926c8,
-        type: 3}
-      propertyPath: shouldLoadAfterFade
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3063763193183766520, guid: 390b6ba69fd80ad48bfc87410c3926c8,
-        type: 3}
-      propertyPath: waitToLoad
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3063763193183766527, guid: 390b6ba69fd80ad48bfc87410c3926c8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17729,6 +17714,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3063763193183766520, guid: 390b6ba69fd80ad48bfc87410c3926c8,
+        type: 3}
+      propertyPath: areaToLoad
+      value: Countryside
+      objectReference: {fileID: 0}
+    - target: {fileID: 3063763193183766520, guid: 390b6ba69fd80ad48bfc87410c3926c8,
+        type: 3}
+      propertyPath: shouldLoadAfterFade
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3063763193183766520, guid: 390b6ba69fd80ad48bfc87410c3926c8,
+        type: 3}
+      propertyPath: waitToLoad
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 390b6ba69fd80ad48bfc87410c3926c8, type: 3}
@@ -17999,3 +17999,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6bdb8cd18a1f2a4892bf5951cf7f3f2, type: 3}
+--- !u!1 &7288889061022700635 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 419365123027942051, guid: d6bdb8cd18a1f2a4892bf5951cf7f3f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 7288889061022700634}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7288889061022700636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7288889061022700635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a545aed433217d544a29f8971d4b9f3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMarkerNames:
+  - 
+  - fight the demon
+  - enter the cave
+  - quest test
+  - save the world
+  questMarkersComplete: 
