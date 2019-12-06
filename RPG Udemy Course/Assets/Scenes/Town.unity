@@ -2836,6 +2836,9 @@ MonoBehaviour:
   - Don't worry
   - I'll save them!
   isPerson: 1
+  shouldActivateQuest: 1
+  questToMark: quest test
+  markComplete: 1
 --- !u!1 &794205927
 GameObject:
   m_ObjectHideFlags: 0
@@ -17634,7 +17637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToActivate: {fileID: 1185651479}
   questToCheck: quest test
-  activeIfComplete: 0
+  activeIfComplete: 1
 --- !u!4 &1800341485
 Transform:
   m_ObjectHideFlags: 0
@@ -17876,7 +17879,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1906457279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17966,6 +17969,9 @@ MonoBehaviour:
   lines:
   - Welcome to town!
   isPerson: 0
+  shouldActivateQuest: 0
+  questToMark: 
+  markComplete: 0
 --- !u!65 &1946471608
 BoxCollider:
   m_ObjectHideFlags: 0
