@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Town.unity
     guid: b25b6380b13a0a648bc661838bf72ae4
+  - enabled: 1
+    path: Assets/Scenes/Shop.unity
+    guid: 5e340085cb7d4554981b58d1a912d3fb
   m_configObjects: {}
