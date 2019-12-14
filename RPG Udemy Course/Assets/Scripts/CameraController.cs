@@ -11,6 +11,8 @@ public class CameraController : MonoBehaviour
     private float halfWidth;
     private Vector3 bottomLeftLimit;
     private Vector3 topRightLimit;
+    public int musicToPlay;
+    private bool musicStarted;
 
     // Start is called before the first frame update
     void Start()
@@ -31,5 +33,10 @@ public class CameraController : MonoBehaviour
 
         //camera inside bounds
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, bottomLeftLimit.x, topRightLimit.x), Mathf.Clamp(transform.position.y, bottomLeftLimit.y, topRightLimit.y), transform.position.z);
+        if(!musicStarted)
+        {
+            musicStarted = true;
+            AudioManager.instance.PlayBGM(musicToPlay);
+        }
     }
 }
