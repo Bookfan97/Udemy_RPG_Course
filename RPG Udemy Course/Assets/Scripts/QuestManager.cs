@@ -65,4 +65,37 @@ public class QuestManager : MonoBehaviour
         }
 
     }
+    public void SaveQuestData()
+    {
+        for (int i= 0; i< questMarkerNames.Length; i++)
+        {
+            if(questMarkersComplete[i])
+            {
+                PlayerPrefs.SetInt("Quest Marker_" + questMarkerNames[i], 1);
+            }
+            else
+            {
+                PlayerPrefs.SetInt("Quest Marker_" + questMarkerNames[i], 0);
+            }
+        }
+    }
+    public void LoadQuestData()
+    {
+        for (int i = 0; i < questMarkerNames.Length; i++)
+        {
+            int valueToSet = 0;
+            if (PlayerPrefs.HasKey("Quest Marker_" + questMarkerNames[i]))
+            {
+                valueToSet = PlayerPrefs.GetInt("Quest Marker_" + questMarkerNames[i]);
+            }
+            if(valueToSet == 0)
+            {
+                questMarkersComplete[i] = false;
+            }
+            else
+            {
+                questMarkersComplete[i] = true;
+            }
+        }
+    }
 }
