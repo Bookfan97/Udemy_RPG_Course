@@ -18017,6 +18017,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lines:
+  - 
   - Welcome to town!
   isPerson: 0
   shouldActivateQuest: 0
