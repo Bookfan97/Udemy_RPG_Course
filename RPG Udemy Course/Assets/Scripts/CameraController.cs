@@ -26,14 +26,14 @@ public class CameraController : MonoBehaviour
         FindObjectOfType<PlayerController>().SetBounds(theMap.localBounds.min, theMap.localBounds.max);
     }
 
-    // Update is called once per frame
+    // LateUpdate is called once per frame after Update
     void LateUpdate()
     {
         transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
 
-        //camera inside bounds
+        //keep the camera inside the bounds
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, bottomLeftLimit.x, topRightLimit.x), Mathf.Clamp(transform.position.y, bottomLeftLimit.y, topRightLimit.y), transform.position.z);
-        if(!musicStarted)
+        if (!musicStarted)
         {
             musicStarted = true;
             AudioManager.instance.PlayBGM(musicToPlay);
