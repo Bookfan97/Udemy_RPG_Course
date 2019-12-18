@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public string newGameScene;
     public GameObject continueButton;
+    public string loadGameScene;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,7 @@ public class MainMenu : MonoBehaviour
     }
     public void Continue()
     {
-
+        SceneManager.LoadScene(loadGameScene);
     }
     public void NewGame()
     {
