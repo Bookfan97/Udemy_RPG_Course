@@ -3222,6 +3222,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3063763193183766520, guid: 390b6ba69fd80ad48bfc87410c3926c8,
+        type: 3}
+      propertyPath: areaToLoad
+      value: Town
+      objectReference: {fileID: 0}
+    - target: {fileID: 3063763193183766520, guid: 390b6ba69fd80ad48bfc87410c3926c8,
+        type: 3}
+      propertyPath: areaTransitionName
+      value: Shop-1
+      objectReference: {fileID: 0}
     - target: {fileID: 3063763193183766525, guid: 390b6ba69fd80ad48bfc87410c3926c8,
         type: 3}
       propertyPath: m_Name
@@ -3250,12 +3260,12 @@ PrefabInstance:
     - target: {fileID: 3063763193183766527, guid: 390b6ba69fd80ad48bfc87410c3926c8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.08
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 3063763193183766527, guid: 390b6ba69fd80ad48bfc87410c3926c8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.06
+      value: -3.93
       objectReference: {fileID: 0}
     - target: {fileID: 3063763193183766527, guid: 390b6ba69fd80ad48bfc87410c3926c8,
         type: 3}
@@ -3305,12 +3315,12 @@ PrefabInstance:
     - target: {fileID: 4278732936630538133, guid: 390b6ba69fd80ad48bfc87410c3926c8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.09
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 4278732936630538133, guid: 390b6ba69fd80ad48bfc87410c3926c8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.27
+      value: 1.38
       objectReference: {fileID: 0}
     - target: {fileID: 4278732936630538133, guid: 390b6ba69fd80ad48bfc87410c3926c8,
         type: 3}

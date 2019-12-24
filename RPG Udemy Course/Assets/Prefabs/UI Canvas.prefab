@@ -41803,7 +41803,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1829954939}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 548972214}
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1833060457
 GameObject:
   m_ObjectHideFlags: 0
@@ -48739,6 +48750,7 @@ MonoBehaviour:
   - {fileID: 628949718}
   - {fileID: 2013282903}
   goldText: {fileID: 818663192}
+  mainMenuName: Main Menu
 --- !u!114 &336730967
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class PlayerLoader : MonoBehaviour
 {
-    public GameObject player;
-    // Start is called before the first frame update
-    void Start()
-    {
-        if (PlayerController.instance == null)
-        {
-            Instantiate(player);
-        }
-    }
+	public GameObject player;
+	// Use this for initialization
+	void Start()
+	{
+		if (PlayerController.instance == null)
+		{
+			Instantiate(player);
+		}
+	}
+	// Update is called once per frame
+	void Update()
+	{
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	}
 }

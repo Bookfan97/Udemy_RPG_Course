@@ -9,11 +9,7 @@ public class GameMenu : MonoBehaviour
     public GameObject theMenu;
     public GameObject[] windows;
     private CharStats[] playerStats;
-    public Text[] nameText;
-    public Text[] hpText;
-    public Text[] mpText;
-    public Text[] lvlText;
-    public Text[] expText;
+    public Text[] nameText, hpText, mpText, lvlText, expText;
     public Slider[] expSlider;
     public Image[] charImage;
     public GameObject[] charStatHolder;
@@ -21,26 +17,25 @@ public class GameMenu : MonoBehaviour
     public Text statusName, statusHP, statusMP, statusStr, statusDef, statusWpnEqpd, statusWpnPwr, statusArmrEqpd, statusArmrPwr, statusExp;
     public Image statusImage;
     public ItemButton[] itemButtons;
-    public static GameMenu instance;
     public string selectedItem;
     public Item activeItem;
     public Text itemName, itemDescription, useButtonText;
     public GameObject itemCharChoiceMenu;
     public Text[] itemCharChoiceNames;
+    public static GameMenu instance;
     public Text goldText;
     public string mainMenuName;
-    // Start is called before the first frame update
+    // Use this for initialization
     void Start()
     {
-        instance = this;    
+        instance = this;
     }
-
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire2"))
         {
-            if(theMenu.activeInHierarchy)
+            if (theMenu.activeInHierarchy)
             {
                 //theMenu.SetActive(false);
                 //GameManager.instance.gameMenuOpen = false;
@@ -55,14 +50,12 @@ public class GameMenu : MonoBehaviour
             AudioManager.instance.PlaySFX(5);
         }
     }
-
     public void UpdateMainStats()
     {
         playerStats = GameManager.instance.playerStats;
-
-        for(int i=0; i<playerStats.Length; i++)
+        for (int i = 0; i < playerStats.Length; i++)
         {
-            if(playerStats[i].gameObject.activeInHierarchy)
+            if (playerStats[i].gameObject.activeInHierarchy)
             {
                 charStatHolder[i].SetActive(true);
                 nameText[i].text = playerStats[i].charName;
@@ -84,9 +77,9 @@ public class GameMenu : MonoBehaviour
     public void ToggleWindow(int windowNumber)
     {
         UpdateMainStats();
-        for(int i=0; i<windows.Length; i++)
+        for (int i = 0; i < windows.Length; i++)
         {
-            if(i==windowNumber)
+            if (i == windowNumber)
             {
                 windows[i].SetActive(!windows[i].activeInHierarchy);
             }
@@ -99,7 +92,7 @@ public class GameMenu : MonoBehaviour
     }
     public void CloseMenu()
     {
-        for(int i=0; i<windows.Length; i++)
+        for (int i = 0; i < windows.Length; i++)
         {
             windows[i].SetActive(false);
         }
@@ -110,11 +103,12 @@ public class GameMenu : MonoBehaviour
     public void OpenStatus()
     {
         UpdateMainStats();
+        //update the information that is shown
         StatusChar(0);
-        for (int i=0; i<statusButtons.Length; i++)
+        for (int i = 0; i < statusButtons.Length; i++)
         {
             statusButtons[i].SetActive(playerStats[i].gameObject.activeInHierarchy);
-            statusButtons[i].GetComponentInChildren<Text>().text=playerStats[i].charName;
+            statusButtons[i].GetComponentInChildren<Text>().text = playerStats[i].charName;
         }
     }
     public void StatusChar(int selected)
@@ -144,7 +138,7 @@ public class GameMenu : MonoBehaviour
         for (int i = 0; i < itemButtons.Length; i++)
         {
             itemButtons[i].buttonValue = i;
-            if(GameManager.instance.itemsHeld[i] != "")
+            if (GameManager.instance.itemsHeld[i] != "")
             {
                 itemButtons[i].buttonImage.gameObject.SetActive(true);
                 itemButtons[i].buttonImage.sprite = GameManager.instance.GetItemDetails(GameManager.instance.itemsHeld[i]).itemSprite;
@@ -160,13 +154,11 @@ public class GameMenu : MonoBehaviour
     public void SelectItem(Item newItem)
     {
         activeItem = newItem;
-
         if (activeItem.isItem)
         {
             useButtonText.text = "Use";
         }
-        
-        if(activeItem.isWeapon ||activeItem.isArmor)
+        if (activeItem.isWeapon || activeItem.isArmor)
         {
             useButtonText.text = "Equip";
         }
@@ -175,16 +167,15 @@ public class GameMenu : MonoBehaviour
     }
     public void DiscardItem()
     {
-        if(activeItem != null)
+        if (activeItem != null)
         {
             GameManager.instance.RemoveItem(activeItem.itemName);
         }
     }
-
     public void OpenItemCharChoice()
     {
         itemCharChoiceMenu.SetActive(true);
-        for (int i=0; i<itemCharChoiceNames.Length; i++)
+        for (int i = 0; i < itemCharChoiceNames.Length; i++)
         {
             itemCharChoiceNames[i].text = GameManager.instance.playerStats[i].charName;
             itemCharChoiceNames[i].transform.parent.gameObject.SetActive(GameManager.instance.playerStats[i].gameObject.activeInHierarchy);
@@ -213,6 +204,7 @@ public class GameMenu : MonoBehaviour
         SceneManager.LoadScene(mainMenuName);
         Destroy(GameManager.instance.gameObject);
         Destroy(PlayerController.instance.gameObject);
+        Destroy(AudioManager.instance.gameObject);
         Destroy(gameObject);
     }
 }

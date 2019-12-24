@@ -8,13 +8,13 @@ public class EssentialsLoader : MonoBehaviour
     public GameObject player;
     public GameObject gameMan;
     public GameObject audioMan;
-    // Start is called before the first frame update
+    public GameObject battleMan;
+    // Use this for initialization
     void Start()
     {
-        if(UIFade.instance == null)
+        if (UIFade.instance == null)
         {
             UIFade.instance = Instantiate(UIScreen).GetComponent<UIFade>();
-
         }
         if (PlayerController.instance == null)
         {
@@ -23,17 +23,17 @@ public class EssentialsLoader : MonoBehaviour
         }
         if (GameManager.instance == null)
         {
-            Instantiate(gameMan);
+            GameManager.instance = Instantiate(gameMan).GetComponent<GameManager>();
         }
         if (AudioManager.instance == null)
         {
-            Instantiate(audioMan);
+            AudioManager.instance = Instantiate(audioMan).GetComponent<AudioManager>();
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
     public string newGameScene;
     public GameObject continueButton;
     public string loadGameScene;
-    // Start is called before the first frame update
+    // Use this for initialization
     void Start()
     {
         if (PlayerPrefs.HasKey("Current_Scene"))
@@ -20,11 +20,10 @@ public class MainMenu : MonoBehaviour
             continueButton.SetActive(false);
         }
     }
-
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void Continue()
     {
@@ -39,3 +38,4 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 }
+
