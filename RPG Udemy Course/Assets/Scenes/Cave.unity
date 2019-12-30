@@ -8636,6 +8636,10 @@ MonoBehaviour:
   - {fileID: 194784917, guid: cd1cfb242db03c049b4f78998e66c281, type: 3}
   - {fileID: 7831057478074214596, guid: 8df3d515be9b32446840a1d664669d0d, type: 3}
   - {fileID: 8182772202732724241, guid: 787b48f2463adaf4d9bc80270b173773, type: 3}
+  activeBattlers: []
+  currentTurn: 0
+  turnWaiting: 0
+  uiButtonsHolder: {fileID: 1857579186}
 --- !u!1 &346347031
 GameObject:
   m_ObjectHideFlags: 0

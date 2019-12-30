@@ -12,6 +12,9 @@ public class BattleManager : MonoBehaviour
     public BattleChar[] playerPrefabs;
     public BattleChar[] enemyPrefabs;
     public List<BattleChar> activeBattlers = new List<BattleChar>();
+    public int currentTurn;
+    public bool turnWaiting;
+    public GameObject uiButtonsHolder;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +25,21 @@ public class BattleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(battleActive)
+        {
+            if(turnWaiting)
+            {
+                if(activeBattlers[currentTurn].isPlayer)
+                {
+                    uiButtonsHolder.SetActive(true);
+                }
+                else
+                {
+                    uiButtonsHolder.SetActive(false);
+                    //enemy attacks
+                }
+            }
+        }
     }
     public void BattleStart(string[] enemiesToSpawn)
     {
@@ -50,9 +67,9 @@ public class BattleManager : MonoBehaviour
                             activeBattlers[i].currentMP = thePlayer.currentMP;
                             activeBattlers[i].maxMP = thePlayer.maxMP;
                             activeBattlers[i].strength = thePlayer.strength;
-//                            activeBattlers[i].defense = thePlayer.defense;
-//                            activeBattlers[i].wpnPower = thePlayer.wpnPower;
-//                            activeBattlers[i].armrPwr = thePlayer.armrPwr;
+                            //activeBattlers[i].defense = thePlayer.defense;
+                            activeBattlers[i].wpnPower = thePlayer.wpnPwr;
+                            activeBattlers[i].armrPower = thePlayer.armrPwr;
                         }
                     }
                 }
@@ -72,6 +89,58 @@ public class BattleManager : MonoBehaviour
                     }
                 }
             }
+            turnWaiting = true;
+            currentTurn = Random.Range(0,activeBattlers.Count);
+        }
+    }
+    public void NextTurn()
+    {
+        if(currentTurn>=activeBattlers.Count)
+        {
+            currentTurn = 0;
+        }
+        turnWaiting = true;
+        UpdateBattle();
+    }
+    public void UpdateBattle()
+    {
+        bool allEnemiesDead = true;
+        bool allPlayersDead = true;
+        for (int i=0; i<activeBattlers.Count; i++)
+        {
+            if(activeBattlers[i].currentHP<0)
+            {
+                activeBattlers[i].currentHP = 0;
+            }
+            if(activeBattlers[i].currentHP==0)
+            {
+                //he dead
+            }
+            else
+            {
+                if(activeBattlers[i].isPlayer)
+                {
+                    allPlayersDead = false;
+                }
+                else
+                {
+                    allPlayersDead = false;
+                }
+            }
+        }
+        if(allEnemiesDead || allPlayersDead)
+        {
+            if(allEnemiesDead)
+            {
+                //they dead
+            }
+            else
+            {
+                //you dead boi
+            }
+            battleScene.SetActive(false);
+            GameManager.instance.battleActive = false;
+            battleActive = false;
         }
     }
 }
