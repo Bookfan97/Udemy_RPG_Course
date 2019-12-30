@@ -6,7 +6,7 @@ public class BattleManager : MonoBehaviour
 {
     public static BattleManager instance;
     private bool battleActive;
-    public GameObject battleScene;
+    public GameObject BattleScene;
     public Transform[] playerPositions;
     public Transform[] enemyPositions;
     public BattleChar[] playerPrefabs;
@@ -25,7 +25,11 @@ public class BattleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(battleActive)
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            BattleStart(new string[] { "Eyeball" });
+        }
+        if (battleActive)
         {
             if(turnWaiting)
             {
@@ -40,6 +44,10 @@ public class BattleManager : MonoBehaviour
                 }
             }
         }
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            NextTurn();
+        }
     }
     public void BattleStart(string[] enemiesToSpawn)
     {
@@ -48,7 +56,7 @@ public class BattleManager : MonoBehaviour
             battleActive = true;
             GameManager.instance.battleActive = true;
             transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y,transform.position.z);
-            battleScene.SetActive(true);
+            BattleScene.SetActive(true);
             AudioManager.instance.PlayBGM(0);
             for (int i=0; i<playerPositions.Length; i++)
             {
@@ -138,7 +146,7 @@ public class BattleManager : MonoBehaviour
             {
                 //you dead boi
             }
-            battleScene.SetActive(false);
+            BattleScene.SetActive(false);
             GameManager.instance.battleActive = false;
             battleActive = false;
         }
