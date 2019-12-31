@@ -21,7 +21,8 @@ public class BattleManager : MonoBehaviour
     public DamageNumber theDamageNumber;
     public Text[] playerName, playerHP, playerMP;
     private int movePower;
-
+    public GameObject targetMenu;
+    public BattleTargetButton[] battleTargetButtons;
     // Start is called before the first frame update
     void Start()
     {
@@ -238,9 +239,8 @@ public class BattleManager : MonoBehaviour
             }
         }
     }
-    public void PlayerAttack(string moveName/*, /int selectedTarget*/)
+    public void PlayerAttack(string moveName, int selectedTarget)
     {
-        int selectedTarget = 2;
         for (int i = 0; i < movesList.Length; i++)
         {
             if (movesList[i].moveName == moveName)
@@ -252,6 +252,33 @@ public class BattleManager : MonoBehaviour
         Instantiate(enemyAttackEffect, activeBattlers[currentTurn].transform.position, activeBattlers[currentTurn].transform.rotation);
         DealDamage(selectedTarget, movePower);
         uiButtonsHolder.SetActive(false);
+        targetMenu.SetActive(false);
         NextTurn();
+    }
+
+    public void OpenTargetMenu(string moveName)
+    {
+        targetMenu.SetActive(true);
+        List<int> Enemies = new List<int>();
+        for(int i=0; i<activeBattlers.Count; i++)
+        {
+            if(activeBattlers[i].isPlayer)
+            {
+                Enemies.Add(i);
+            }
+        }
+        for(int i=0; i<battleTargetButtons.Length; i++)
+        {
+            if(Enemies.Count>i)
+            {
+                battleTargetButtons[i].gameObject.SetActive(true);
+                battleTargetButtons[i].activeBattlerTarget = Enemies[i];
+                battleTargetButtons[i].targetName.text = activeBattlers[Enemies[i]].charName;
+            }
+            else
+            {
+                battleTargetButtons[i].gameObject.SetActive(false);
+            }
+        }
     }
 }
