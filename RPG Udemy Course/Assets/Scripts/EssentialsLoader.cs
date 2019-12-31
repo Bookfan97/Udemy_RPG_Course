@@ -29,6 +29,10 @@ public class EssentialsLoader : MonoBehaviour
         {
             AudioManager.instance = Instantiate(audioMan).GetComponent<AudioManager>();
         }
+        if (BattleManager.instance == null)
+        {
+            BattleManager.instance = Instantiate(battleMan).GetComponent<BattleManager>();
+        }
     }
 
     // Update is called once per frame

@@ -9801,6 +9801,7 @@ MonoBehaviour:
   - {fileID: 1025048159}
   battleNotice: {fileID: 0}
   chanceToFlee: 35
+  gameOverScene: GameOver
 --- !u!1 &346347031
 GameObject:
   m_ObjectHideFlags: 0
