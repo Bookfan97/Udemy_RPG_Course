@@ -105,4 +105,6 @@ MonoBehaviour:
   wpnPower: 0
   armrPower: 0
   hasDied: 0
-  movesAvailable: []
+  movesAvailable:
+  - Fire
+  - Ice
