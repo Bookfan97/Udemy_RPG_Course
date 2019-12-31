@@ -107,3 +107,6 @@ MonoBehaviour:
   movesAvailable:
   - Ice
   - Plasma
+  theSprite: {fileID: 4631158651740699273}
+  deadSprite: {fileID: 21300046, guid: e0ddba6d3fcf21f49949fcc95c849aac, type: 3}
+  aliveSprite: {fileID: 21300036, guid: e0ddba6d3fcf21f49949fcc95c849aac, type: 3}

@@ -108,3 +108,8 @@ MonoBehaviour:
   movesAvailable:
   - Fire
   - Ice
+  theSprite: {fileID: 5728173364126599230}
+  deadSprite: {fileID: 8888318505984086984, guid: cddd6c24f386bce409ed3b73721a4943,
+    type: 3}
+  aliveSprite: {fileID: -1038918931832879880, guid: cddd6c24f386bce409ed3b73721a4943,
+    type: 3}
