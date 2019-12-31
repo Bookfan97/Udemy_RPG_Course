@@ -24,6 +24,7 @@ public class BattleManager : MonoBehaviour
     public GameObject targetMenu, magicMenu;
     public BattleTargetButton[] battleTargetButtons;
     public BattleMagicSelect[] magicButtons;
+    public BattleNotification battleNotice;
     // Start is called before the first frame update
     void Start()
     {
