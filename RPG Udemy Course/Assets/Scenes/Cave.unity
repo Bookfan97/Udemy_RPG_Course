@@ -8660,6 +8660,18 @@ MonoBehaviour:
   enemyAttackEffect: {fileID: 4801818534804432845, guid: 39daa001f77d5544b9cedaf716d855ff,
     type: 3}
   theDamageNumber: {fileID: 0}
+  playerName:
+  - {fileID: 368778014}
+  - {fileID: 936052541}
+  - {fileID: 1291732969}
+  playerHP:
+  - {fileID: 1342649476}
+  - {fileID: 383079852}
+  - {fileID: 1948003407}
+  playerMP:
+  - {fileID: 1353923054}
+  - {fileID: 435822372}
+  - {fileID: 307962525}
 --- !u!1 &346347031
 GameObject:
   m_ObjectHideFlags: 0
