@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c61b388fd2806184fa58d9d52720477c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayer: 0
+  isPlayer: 1
   charName: Woody
   currentHP: 0
   maxHP: 0
@@ -104,3 +104,4 @@ MonoBehaviour:
   wpnPower: 0
   armrPower: 0
   hasDied: 0
+  movesAvailable: []

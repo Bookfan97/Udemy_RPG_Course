@@ -17,6 +17,7 @@ public class BattleManager : MonoBehaviour
     public GameObject uiButtonsHolder;
     public BattleMoves[] movesList;
     public GameObject enemyAttackEffect;
+    public DamageNumber theDamageNumber;
     // Start is called before the first frame update
     void Start()
     {
@@ -192,5 +193,6 @@ public class BattleManager : MonoBehaviour
         float damageCalc = (attackPower / defPwr) * movePower * Random.Range(0.9f, 1.1f);
         int damageToGive = Mathf.RoundToInt(damageCalc);
         activeBattlers[target].currentHP -= damageToGive;
+        Instantiate(theDamageNumber, activeBattlers[target].transform.position, activeBattlers[target].transform.rotation).SetDamage(damageToGive);
     }
 }
