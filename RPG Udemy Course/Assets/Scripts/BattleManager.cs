@@ -139,6 +139,10 @@ public class BattleManager : MonoBehaviour
                 {
                     activeBattlers[i].theSprite.sprite = activeBattlers[i].deadSprite;
                 }
+                else
+                {
+                    activeBattlers[i].enemyFade();
+                }
             }
             else
             {
@@ -276,7 +280,7 @@ public class BattleManager : MonoBehaviour
         }
         for(int i=0; i<battleTargetButtons.Length; i++)
         {
-            if(Enemies.Count>i)
+            if(Enemies.Count>i && activeBattlers[Enemies[i]].currentHP>0)
             {
                 battleTargetButtons[i].gameObject.SetActive(true);
                 battleTargetButtons[i].activeBattlerTarget = Enemies[i];

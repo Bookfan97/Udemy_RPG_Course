@@ -107,3 +107,7 @@ MonoBehaviour:
   movesAvailable:
   - Slash
   - Plasma
+  theSprite: {fileID: 3201411948839330488}
+  deadSprite: {fileID: 0}
+  aliveSprite: {fileID: 0}
+  fadeSpeed: 1
