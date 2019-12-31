@@ -162,14 +162,15 @@ public class BattleManager : MonoBehaviour
             if(allEnemiesDead)
             {
                 //they dead
+                StartCoroutine(EndBattleCo());
             }
             else
             {
                 //you dead boi
             }
-            BattleScene.SetActive(false);
-            GameManager.instance.battleActive = false;
-            battleActive = false;
+            //BattleScene.SetActive(false);
+            //GameManager.instance.battleActive = false;
+            //battleActive = false;
         }
         else
         {
@@ -322,8 +323,7 @@ public class BattleManager : MonoBehaviour
         int fleeSuccess = Random.Range(0, 100);
         if(fleeSuccess<chanceToFlee)
         {
-            battleActive = false;
-            BattleScene.SetActive(false);
+            StartCoroutine(EndBattleCo());
         }
         else
         {
@@ -331,5 +331,36 @@ public class BattleManager : MonoBehaviour
             battleNotice.theText.text = "Couldn't escape!";
             battleNotice.Activate();
         }
+    }
+    new public IEnumerator EndBattleCo()
+    {
+        battleActive = false;
+        uiButtonsHolder.SetActive(false);
+        targetMenu.SetActive(false);
+        magicMenu.SetActive(false);
+        yield return new WaitForSeconds(.5f);
+        UIFade.instance.FadeToBlack();
+        yield return new WaitForSeconds(1.5f);
+        for(int i=0; i<activeBattlers.Count; i++)
+        {
+            if(activeBattlers[i].isPlayer)
+            {
+                for(int j=0; j<GameManager.instance.playerStats.Length; j++)
+                {
+                    if(activeBattlers[i].charName == GameManager.instance.playerStats[j].charName)
+                    {
+                        GameManager.instance.playerStats[j].currentHP = activeBattlers[i].currentHP;
+                        GameManager.instance.playerStats[j].currentMP = activeBattlers[i].currentMP;
+                    }
+                }
+            }
+            Destroy(activeBattlers[i].gameObject);
+        }
+        UIFade.instance.FadeFromBlack();
+        BattleScene.SetActive(false);
+        activeBattlers.Clear();
+        currentTurn = 0;
+        GameManager.instance.battleActive = false;
+        AudioManager.instance.PlayBGM(FindObjectOfType<CameraController>().musicToPlay);
     }
 }
