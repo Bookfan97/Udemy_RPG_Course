@@ -27,7 +27,10 @@ public class BattleManager : MonoBehaviour
     public BattleMagicSelect[] magicButtons;
     public BattleNotification battleNotice;
     public int chanceToFlee = 35;
+    private bool fleeing;
     public string gameOverScene;
+    public int rewardXP;
+    public string[] rewardItems;
     // Start is called before the first frame update
     void Start()
     {
@@ -326,6 +329,7 @@ public class BattleManager : MonoBehaviour
         int fleeSuccess = Random.Range(0, 100);
         if(fleeSuccess<chanceToFlee)
         {
+            fleeing = true;
             StartCoroutine(EndBattleCo());
         }
         else
@@ -363,6 +367,15 @@ public class BattleManager : MonoBehaviour
         BattleScene.SetActive(false);
         activeBattlers.Clear();
         currentTurn = 0;
+        if(fleeing)
+        {
+            GameManager.instance.battleActive = false;
+            fleeing = false;
+        }
+        else
+        {
+            BattleReward.instance.OpenRewardScreen(rewardXP, rewardItems);
+        }
         GameManager.instance.battleActive = false;
         AudioManager.instance.PlayBGM(FindObjectOfType<CameraController>().musicToPlay);
     }
