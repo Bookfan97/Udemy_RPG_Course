@@ -44,7 +44,7 @@ public class BattleManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.T))
         {
-            BattleStart(new string[] { "Eyeball" });
+         //   BattleStart(new string[] { "Eyeball" });
         }
         if (battleActive)
         {
@@ -347,7 +347,6 @@ public class BattleManager : MonoBehaviour
                 battleNotice.Activate();
             }
         }
-        
     }
     new public IEnumerator EndBattleCo()
     {
