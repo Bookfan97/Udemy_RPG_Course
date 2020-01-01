@@ -27,10 +27,11 @@ public class BattleManager : MonoBehaviour
     public BattleMagicSelect[] magicButtons;
     public BattleNotification battleNotice;
     public int chanceToFlee = 35;
-    private bool fleeing;
+    private bool fleeing, cannotFlee;
     public string gameOverScene;
     public int rewardXP;
     public string[] rewardItems;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -65,10 +66,11 @@ public class BattleManager : MonoBehaviour
             NextTurn();
         }
     }
-    public void BattleStart(string[] enemiesToSpawn)
+    public void BattleStart(string[] enemiesToSpawn, bool setCannotFlee)
     {
         if (!battleActive)
         {
+            cannotFlee = setCannotFlee;
             battleActive = true;
             GameManager.instance.battleActive = true;
             transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y,transform.position.z);
@@ -326,18 +328,26 @@ public class BattleManager : MonoBehaviour
     }
     public void Flee()
     {
-        int fleeSuccess = Random.Range(0, 100);
-        if(fleeSuccess<chanceToFlee)
+        if(cannotFlee)
         {
-            fleeing = true;
-            StartCoroutine(EndBattleCo());
+            battleNotice.theText.text = "Cannot flee, it's a boss battle obviously!";
         }
         else
         {
-            NextTurn();
-            battleNotice.theText.text = "Couldn't escape!";
-            battleNotice.Activate();
+            int fleeSuccess = Random.Range(0, 100);
+            if (fleeSuccess < chanceToFlee)
+            {
+                fleeing = true;
+                StartCoroutine(EndBattleCo());
+            }
+            else
+            {
+                NextTurn();
+                battleNotice.theText.text = "Couldn't escape!";
+                battleNotice.Activate();
+            }
         }
+        
     }
     new public IEnumerator EndBattleCo()
     {

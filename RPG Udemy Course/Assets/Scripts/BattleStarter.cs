@@ -10,6 +10,7 @@ public class BattleStarter : MonoBehaviour
     public float timeBetweenBattles;
     private float betweenBattleCounter;
     public bool deactivateAffterStart;
+    public bool cannotFlee;
     // Start is called before the first frame update
     void Start()
     {
@@ -70,7 +71,7 @@ public class BattleStarter : MonoBehaviour
         BattleManager.instance.rewardItems = potentialBattles[selectedBattle].rewardItems;
         BattleManager.instance.rewardXP = potentialBattles[selectedBattle].rewardXP;
         yield return new WaitForSeconds(1.5f);
-        BattleManager.instance.BattleStart(potentialBattles[selectedBattle].enemies);
+        BattleManager.instance.BattleStart(potentialBattles[selectedBattle].enemies, cannotFlee);
         UIFade.instance.FadeFromBlack();
         if(deactivateAffterStart)
         {
