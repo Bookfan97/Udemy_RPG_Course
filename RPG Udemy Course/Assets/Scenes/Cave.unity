@@ -8470,7 +8470,7 @@ MonoBehaviour:
   timeBetweenBattles: 0
   deactivateAffterStart: 1
   cannotFlee: 1
-  shouldCompleteQuest: 0
+  shouldCompleteQuest: 1
   questToComplete: Fight the demon
 --- !u!61 &328255111
 BoxCollider2D:
@@ -10789,6 +10789,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1647221684984141136, guid: b5b5bf24a2d548846bba0be773b27035,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1647221686390962982, guid: b5b5bf24a2d548846bba0be773b27035,
         type: 3}
       propertyPath: m_Name
